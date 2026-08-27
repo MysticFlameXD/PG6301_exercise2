@@ -27,5 +27,12 @@ export function yahtzeeScore(scoreName, diceNumbers) {
       }
     });
     return total;
+  } else if (scoreName === "One Pair") {
+    let sortedDiceNumbers = diceNumbers.toSorted();
+    for (let i = 0; i < sortedDiceNumbers.length - 1; i++) {
+      if (sortedDiceNumbers[i] === sortedDiceNumbers[i + 1]) {
+        return sortedDiceNumbers[i] * 2;
+      }
+    }
   }
 }
