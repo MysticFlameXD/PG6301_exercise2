@@ -10,3 +10,7 @@ test("scoring Ones add all ones", () => {
 test("scoring Twos add all twos", () => {
   expect(yahtzeeScore("Twos", [1, 2, 2, 2, 2])).toBe(8);
 });
+test("scoring Threes add all threes", () => {
+  expect(yahtzeeScore("Threes", [3, 3, 3, 3, 5])).toBe(12);
+});
+

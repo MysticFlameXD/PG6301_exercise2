@@ -19,5 +19,13 @@ export function yahtzeeScore(scoreName, diceNumbers) {
       }
     });
     return total;
+  } else if (scoreName === "Threes") {
+    let total = 0;
+    diceNumbers.forEach((dice) => {
+      if (dice === 3) {
+        total += dice;
+      }
+    });
+    return total;
   }
 }
