@@ -51,5 +51,15 @@ export function yahtzeeScore(scoreName, diceNumbers) {
       }
     });
     return total;
+  } else if (scoreName === "Yahtzee") {
+    let total = 0;
+    for (let i = 0; i < diceNumbers.length - 1; i++) {
+      if (diceNumbers[i] === diceNumbers[i + 1]) {
+        total = 50;
+      } else {
+        return 0;
+      }
+    }
+    return total;
   }
 }

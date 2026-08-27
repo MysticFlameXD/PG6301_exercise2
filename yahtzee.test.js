@@ -22,3 +22,6 @@ test("scoring Fives add all fives", () => {
 test("scoring Sixes add all sixes", () => {
   expect(yahtzeeScore("Sixes", [6, 6, 6, 6, 2])).toBe(24);
 });
+test("scoring Yahtzee checks if all values are identical", () => {
+  expect(yahtzeeScore("Yahtzee", [2, 2, 2, 2, 2])).toBe(50);
+});
