@@ -13,3 +13,12 @@ test("scoring Twos add all twos", () => {
 test("scoring Threes add all threes", () => {
   expect(yahtzeeScore("Threes", [3, 3, 3, 3, 5])).toBe(12);
 });
+test("scoring Fours add all fours", () => {
+  expect(yahtzeeScore("Fours", [4, 4, 2, 1, 5])).toBe(8);
+});
+test("scoring Fives add all fives", () => {
+  expect(yahtzeeScore("Fives", [5, 5, 3, 3, 5])).toBe(15);
+});
+test("scoring Sixes add all sixes", () => {
+  expect(yahtzeeScore("Sixes", [6, 6, 6, 6, 2])).toBe(24);
+});
