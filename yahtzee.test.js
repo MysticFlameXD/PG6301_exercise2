@@ -4,5 +4,6 @@ import { yahtzeeScore } from "./yahtzee";
 test("scoring Chance add all dice", () => {
   expect(yahtzeeScore("Chance", [1, 2, 3, 4, 5])).toBe(1 + 2 + 3 + 4 + 5);
 });
-
-
+test("scoring Ones add all ones", () => {
+  expect(yahtzeeScore("Ones", [1, 1, 1, 4, 5])).toBe(3);
+});
