@@ -1,12 +1,11 @@
 export function yahtzeeScore(scoreName, diceNumbers) {
+  let total = 0;
   if (scoreName === "Chance") {
-    let total = 0;
     diceNumbers.forEach((dice) => {
       total += dice;
     });
     return total;
   } else if (scoreName === "Ones") {
-    let total = 0;
     diceNumbers.forEach((dice) => {
       if (dice === 1) {
         total += dice;
@@ -14,7 +13,6 @@ export function yahtzeeScore(scoreName, diceNumbers) {
     });
     return total;
   } else if (scoreName === "Twos") {
-    let total = 0;
     diceNumbers.forEach((dice) => {
       if (dice === 2) {
         total += dice;
