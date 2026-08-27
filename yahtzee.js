@@ -1,6 +1,9 @@
 export function yahtzeeScore(scoreName, diceNumbers) {
-  switch (scoreName) {
-    case "Chance":
-      return 1 + 2 + 3 + 4 + 5;
+  if (scoreName === "Chance") {
+    let total = 0;
+    diceNumbers.forEach((dice) => {
+      total += dice;
+    });
+    return total;
   }
 }
