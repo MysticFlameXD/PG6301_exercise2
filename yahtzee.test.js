@@ -7,3 +7,6 @@ test("scoring Chance add all dice", () => {
 test("scoring Ones add all ones", () => {
   expect(yahtzeeScore("Ones", [1, 1, 1, 4, 5])).toBe(3);
 });
+test("scoring Twos add all twos", () => {
+  expect(yahtzeeScore("Twos", [1, 2, 2, 2, 2])).toBe(8);
+});
