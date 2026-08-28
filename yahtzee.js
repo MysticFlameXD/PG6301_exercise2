@@ -56,6 +56,24 @@ export function yahtzeeScore(scoreName, diceNumbers) {
       }
     }
     return 0;
+  } else if (scoreName === "Two Pairs") {
+    let dicePairs = [];
+    let sortedDiceNumbers = diceNumbers.toSorted();
+    for (let i = 0; i < sortedDiceNumbers.length; i++) {
+      if (sortedDiceNumbers[i] === sortedDiceNumbers[i + 1]) {
+        dicePairs.push(sortedDiceNumbers[i]);
+        dicePairs.push(sortedDiceNumbers[i + 1]);
+        i++;
+      }
+    }
+    if (dicePairs.length === 4) {
+      dicePairs.forEach((dice) => {
+        total += dice;
+      });
+      return total;
+    } else {
+      return 0;
+    }
   } else if (scoreName === "Yahtzee") {
     for (let i = 0; i < diceNumbers.length - 1; i++) {
       if (diceNumbers[i] === diceNumbers[i + 1]) {
