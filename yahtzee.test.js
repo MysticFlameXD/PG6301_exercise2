@@ -21,6 +21,7 @@ test("scoring One Pair add a pair of 5s", () => {
 });
 test("scoring One Pair with no pair", () => {
   expect(yahtzeeScore("One Pair", [1, 3, 4, 2, 5])).toBe(0);
+});
 test("scoring Fours add all fours", () => {
   expect(yahtzeeScore("Fours", [4, 4, 2, 1, 5])).toBe(8);
 });

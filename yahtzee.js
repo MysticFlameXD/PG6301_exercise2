@@ -20,9 +20,29 @@ export function yahtzeeScore(scoreName, diceNumbers) {
     });
     return total;
   } else if (scoreName === "Threes") {
-    let total = 0;
     diceNumbers.forEach((dice) => {
       if (dice === 3) {
+        total += dice;
+      }
+    });
+    return total;
+  } else if (scoreName === "Fours") {
+    diceNumbers.forEach((dice) => {
+      if (dice === 4) {
+        total += dice;
+      }
+    });
+    return total;
+  } else if (scoreName === "Fives") {
+    diceNumbers.forEach((dice) => {
+      if (dice === 5) {
+        total += dice;
+      }
+    });
+    return total;
+  } else if (scoreName === "Sixes") {
+    diceNumbers.forEach((dice) => {
+      if (dice === 6) {
         total += dice;
       }
     });
@@ -35,32 +55,7 @@ export function yahtzeeScore(scoreName, diceNumbers) {
       }
     }
     return 0;
-  } else if (scoreName === "Fours") {
-    let total = 0;
-    diceNumbers.forEach((dice) => {
-      if (dice === 4) {
-        total += dice;
-      }
-    });
-    return total;
-  } else if (scoreName === "Fives") {
-    let total = 0;
-    diceNumbers.forEach((dice) => {
-      if (dice === 5) {
-        total += dice;
-      }
-    });
-    return total;
-  } else if (scoreName === "Sixes") {
-    let total = 0;
-    diceNumbers.forEach((dice) => {
-      if (dice === 6) {
-        total += dice;
-      }
-    });
-    return total;
   } else if (scoreName === "Yahtzee") {
-    let total = 0;
     for (let i = 0; i < diceNumbers.length - 1; i++) {
       if (diceNumbers[i] === diceNumbers[i + 1]) {
         total = 50;
