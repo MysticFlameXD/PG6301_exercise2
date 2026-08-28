@@ -31,6 +31,16 @@ test("scoring One Pair add a pair of 5s", () => {
 test("scoring One Pair with no pair", () => {
   expect(yahtzeeScore("One Pair", [1, 3, 4, 2, 5])).toBe(0);
 });
+test("scoring Two pairs with a pair of 2s and 3s", () => {
+  expect(yahtzeeScore("Two Pairs", [1, 2, 2, 3, 3])).toBe(10);
+});
+test("scoring Two pairs with two pairs of 4", () => {
+  expect(yahtzeeScore("Two Pairs", [4, 4, 4, 4, 6])).toBe(16);
+});
+test("scoring Two pairs with only one pair", () => {
+  expect(yahtzeeScore("Two Pairs", [3, 4, 4, 5, 6])).toBe(0);
+});
+
 test("scoring Yahtzee checks if all values are identical", () => {
   expect(yahtzeeScore("Yahtzee", [2, 2, 2, 2, 2])).toBe(50);
 });
