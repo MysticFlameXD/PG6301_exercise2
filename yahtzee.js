@@ -34,5 +34,6 @@ export function yahtzeeScore(scoreName, diceNumbers) {
         return sortedDiceNumbers[i] * 2;
       }
     }
+    return 0;
   }
 }

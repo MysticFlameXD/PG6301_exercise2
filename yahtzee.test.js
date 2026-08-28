@@ -19,3 +19,6 @@ test("scoring One Pair add a pair of 2s", () => {
 test("scoring One Pair add a pair of 5s", () => {
   expect(yahtzeeScore("One Pair", [1, 3, 4, 5, 5])).toBe(10);
 });
+test("scoring One Pair with no pair", () => {
+  expect(yahtzeeScore("One Pair", [1, 3, 4, 2, 5])).toBe(0);
+});
