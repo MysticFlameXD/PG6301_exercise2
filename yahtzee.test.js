@@ -21,4 +21,15 @@ test("scoring One Pair add a pair of 5s", () => {
 });
 test("scoring One Pair with no pair", () => {
   expect(yahtzeeScore("One Pair", [1, 3, 4, 2, 5])).toBe(0);
+test("scoring Fours add all fours", () => {
+  expect(yahtzeeScore("Fours", [4, 4, 2, 1, 5])).toBe(8);
+});
+test("scoring Fives add all fives", () => {
+  expect(yahtzeeScore("Fives", [5, 5, 3, 3, 5])).toBe(15);
+});
+test("scoring Sixes add all sixes", () => {
+  expect(yahtzeeScore("Sixes", [6, 6, 6, 6, 2])).toBe(24);
+});
+test("scoring Yahtzee checks if all values are identical", () => {
+  expect(yahtzeeScore("Yahtzee", [2, 2, 2, 2, 2])).toBe(50);
 });
